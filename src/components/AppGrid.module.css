@@ -1,0 +1,50 @@
+.appGrid {
+  display: grid;
+  gap: 5.5rem;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  padding: 2.8%;
+  box-sizing: border-box;
+  z-index: 1;
+
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  max-width: calc(8 * 120px + 7 * 6rem + 6%);
+  margin: 0 auto;
+
+}
+
+.appGridItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem;
+  width: 120px;
+  height: 120px;
+  border-radius: 13px;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.appGridItem:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Image wrapper to make next/image respect border-radius */
+.appGridIconWrapper {
+  width: 80px;
+  height: 80px;
+  border-radius: 13px;
+  overflow: hidden;
+}
+
+.appGridLabel {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #eaeaea;
+  text-align: center;
+  width: 100%;
+  word-break: break-word;
+}
