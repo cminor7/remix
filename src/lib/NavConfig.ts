@@ -35,16 +35,22 @@ export function NavConfig(path: string) {
     ];
   }
 
-  if (path.startsWith("/Dashboard")) {
+  if (path.startsWith("/RequestForm")) {
     return [
       {
-        label: "ReadMe",
+        label: "",
         path: "/Dashboard",
       },
       {
         label: "Reports",
         path: "/Dashboard/Reports",
       },
+      {
+        label: "Submit",
+        isButton: true,
+        /*onClick: () => console.log("Login clicked!"),*/
+        onClick: () => "",
+        },
     ];
   }
 

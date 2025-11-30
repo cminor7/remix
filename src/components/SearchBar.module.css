@@ -1,0 +1,31 @@
+/* components/SearchBar.module.css */
+
+.searchContainer
+{
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+.searchInput {
+  width: 700px;            /* fixed width — adjust as you like (e.g. 500px or 60%) */
+  max-width: 90%;          /* ensure it shrinks on small screens */
+  padding: 0.9rem 1.2rem;  /* make it a bit "thicker" / taller */
+  border: 1px solid #555;
+  border-radius: 24px;
+  background-color: #2a2a2a; 
+  color: #efefef;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  display: block;          /* make input a block-level so margin auto works */
+  margin: 0 auto;          /* center horizontally within parent */
+}
+
+.searchInput:focus {
+  border-color: #4fa3ff;
+  box-shadow: 0 0 6px rgba(79, 163, 255, 0.4);
+}
+
+.searchInput::placeholder {
+  color: #bbb;
+}

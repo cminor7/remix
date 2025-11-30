@@ -1,5 +1,6 @@
-.status-bar {
-  position: sticky;
+/* Status bar wrapper */
+.statusBar {
+  position: fixed;
   bottom: 0;
   left: 0;
 
@@ -17,14 +18,13 @@
   z-index: 9999;
 }
 
-
-.status-content {
+.statusContent {
   display: flex;
   align-items: center;
   gap: 0.6rem;
 }
 
-.status-icon {
+.statusIcon {
   font-size: 1rem;
 }
 
@@ -33,18 +33,18 @@
   animation: spin 1s linear infinite;
 }
 
-.status-message {
+.statusMessage {
   font-size: 0.9rem;
 }
 
-.status-progress-text {
+.statusProgressText {
   margin-left: auto;
   font-size: 0.9rem;
   color: #aaa;
 }
 
 /* Progress bar container */
-.status-progress-bar {
+.statusProgressBar {
   margin-top: 0.4rem;
   width: 100%;
   height: 6px;
@@ -54,7 +54,7 @@
 }
 
 /* Progress fill */
-.progress-fill {
+.progressFill {
   height: 100%;
   background: #4fa3ff;
   transition: width 0.25s ease-in-out;

@@ -3,7 +3,12 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 
-import NavWrapper from "./NavWrapper";
+import NavWrapper from "../components/NavWrapper";
+import StatusWrapper from "@/components/StatusWrapper";
+
+
+
+
 
 
 
@@ -30,17 +35,20 @@ export default function RootLayout({
 
 
 
+
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
       
       <div className="pageLayout">
 
-        <NavWrapper/>
-        
-
+        <NavWrapper />
 
         {children}
+
+        <StatusWrapper />
+
+        
 
 
       </div>

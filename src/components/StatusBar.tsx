@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/StatusBar.css";
+import styles from "./StatusBar.module.css";
 
 export type StatusIcon = "info" | "success" | "warning" | "error" | "loading";
 
@@ -13,46 +13,47 @@ interface StatusBarProps {
 }
 
 const StatusBar: React.FC<StatusBarProps> = ({ message, icon, progress }) => {
-  const percentage =
-    progress ? Math.round((progress.current / progress.total) * 100) : 0;
+  const percentage = progress
+    ? Math.round((progress.current / progress.total) * 100)
+    : 0;
 
   const renderIcon = () => {
+    const iconClass = `${styles.statusIcon} ${icon === "loading" ? styles.spin : ""}`;
     switch (icon) {
       case "info":
-        return <span className="status-icon">ℹ️</span>;
+        return <span className={iconClass}>ℹ️</span>;
       case "success":
-        return <span className="status-icon">✔️</span>;
+        return <span className={iconClass}>✔️</span>;
       case "warning":
-        return <span className="status-icon">⚠️</span>;
+        return <span className={iconClass}>⚠️</span>;
       case "error":
-        return <span className="status-icon">❌</span>;
+        return <span className={iconClass}>❌</span>;
       case "loading":
-        return <span className="status-icon spin">⏳</span>;
+        return <span className={iconClass}>⏳</span>;
       default:
         return null;
     }
   };
 
   return (
-    <div className="status-bar">
-      <div className="status-content">
+    <div className={styles.statusBar}>
+      <div className={styles.statusContent}>
         {icon && renderIcon()}
-        <span className="status-message">{message}</span>
+        <span className={styles.statusMessage}>{message}</span>
 
         {progress && (
-          <span className="status-progress-text">
+          <span className={styles.statusProgressText}>
             {progress.current} / {progress.total}
           </span>
         )}
       </div>
 
-      {/* Progress Bar */}
       {progress && (
-        <div className="status-progress-bar">
+        <div className={styles.statusProgressBar}>
           <div
-            className="progress-fill"
+            className={styles.progressFill}
             style={{ width: `${percentage}%` }}
-          ></div>
+          />
         </div>
       )}
     </div>

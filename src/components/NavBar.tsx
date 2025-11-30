@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import Link from "next/link";
 import styles from "./NavBar.module.css";
@@ -12,7 +13,7 @@ const NavBar: React.FC<NavBarProps> = ({ items }) => {
 
       {/* -------------- LOGO AREA ---------------- */}
       <Link href="/" className={styles.navbarLogo}>
-        <Image src="/grainger_logo.png" alt="Grainger Logo" width={40} height={40}/>
+        <Image src="/grainger_logo.png" alt="Grainger Logo" width={37} height={37}/>
         Home
       </Link>
       {/* --------------------------------------------------- */}

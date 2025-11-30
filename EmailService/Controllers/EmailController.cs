@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using EmailApi.Services;
+using EmailService.Services;
 using System.Threading.Tasks;
 
-namespace EmailApi.Controllers
+namespace EmailService.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

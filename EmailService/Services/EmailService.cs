@@ -2,7 +2,7 @@ using Microsoft.Graph;
 using Microsoft.Graph.Models;
 using Azure.Identity;
 
-namespace EmailApi.Services
+namespace EmailService.Services
 {
     public class GraphEmailService
     {

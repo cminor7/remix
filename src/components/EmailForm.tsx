@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./EmailForm.module.css";
 import type { EmailFormProps } from "@/types/EmailForm";
+import FileUploader from "./FileUploader";
 
 const EmailForm: React.FC<EmailFormProps> = ({
   showSupplier = false,
@@ -60,7 +61,8 @@ const EmailForm: React.FC<EmailFormProps> = ({
       <div className={`${styles.formRow} ${styles.horizontalMessageRow}`}>
         {showSupplier && (
           <div className={styles.supplierColumn}>
-            <textarea placeholder="List suppliers here" />
+            {/*<textarea placeholder="List suppliers here" />*/}
+            <FileUploader />
           </div>
         )}
 

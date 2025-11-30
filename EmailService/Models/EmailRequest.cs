@@ -1,4 +1,4 @@
-namespace EmailApi.Models
+namespace EmailService.Models
 {
     public class EmailRequest
     {

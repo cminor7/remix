@@ -1,8 +1,10 @@
+"use client";
 
 import type { FormField } from "@/types/FormGrid";
 import FormGrid from "@/components/FormGrid";
+import SearchBar from "@/components/SearchBar";
 
-export default function RequestForm() {
+export default function SupplierInfo() {
     
     const fields: FormField[] = [
     {
@@ -61,6 +63,7 @@ export default function RequestForm() {
   return (
     <div className='pageLayout'>
         
+        <SearchBar placeholder="Type to search…" onSearch={(q) => console.log(q)} />
         <FormGrid fields={fields}/>
     </div>
   )

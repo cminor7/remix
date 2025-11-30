@@ -10,6 +10,7 @@ const AppGrid: React.FC<AppGridProps> = ({ apps }) => {
   const router = useRouter();
 
   return (
+
     <div className={styles.appGrid}>
       {apps.map((app, index) => {
         const handleClick = () => {
@@ -21,6 +22,7 @@ const AppGrid: React.FC<AppGridProps> = ({ apps }) => {
         };
 
         return (
+          
           <div
             key={index}
             className={styles.appGridItem}
@@ -38,9 +40,15 @@ const AppGrid: React.FC<AppGridProps> = ({ apps }) => {
 
             <span className={styles.appGridLabel}>{app.name}</span>
           </div>
+
+           
         );
       })}
     </div>
+
+
+
+   
   );
 };
 
